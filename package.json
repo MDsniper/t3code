@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "7.28.6",
